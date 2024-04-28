@@ -1,0 +1,57 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --mainColor: #ff3946;
+  --darkBlue: #314584;
+  --darkGray: #6e757a;
+  --lightGray: #f4fafe;
+  --white: #fff;
+  --workSans: 'Work Sans', sans-serif;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background-color: var(--lightGray);
+}
+::-webkit-scrollbar-thumb {
+  background-color: var(--mainColor);
+  border-radius: 10px;
+}
+
+@layer components {
+  .max-container {
+    max-width: 1024px;
+    margin: 0 auto;
+  }
+  .landingH {
+    min-height: calc(100dvh - 88px);
+  }
+  .link {
+    @apply relative font-medium before:absolute before:bottom-0 before:left-0 before:h-[1px] before:w-full before:origin-left before:scale-0 before:bg-black before:transition-all before:duration-300 before:ease-linear hover:font-bold before:hover:scale-100;
+  }
+  .menuStyle {
+    @apply max-md:my-1 max-md:border-b max-md:border-black/10 max-md:py-2 max-md:pl-4;
+  }
+  .card {
+    @apply border-b-2 p-8 shadow-lg transition-all duration-300 hover:-translate-y-3 hover:border-b-2 hover:border-b-[--mainColor] sm:my-8 md:my-auto;
+  }
+  .primary-btn {
+    @apply rounded-full bg-[--mainColor] px-4 py-2 font-semibold capitalize text-[--white] shadow-lg transition-all duration-300 hover:bg-red-600;
+  }
+  .animateUp {
+    animation: up 1s linear infinite alternate;
+  }
+}
+
+@keyframes up {
+  0% {
+    top: 0;
+  }
+  100% {
+    top: -20px;
+  }
+}
