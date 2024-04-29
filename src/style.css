@@ -935,8 +935,17 @@ video {
   border-width: 2px;
 }
 
+.border-4 {
+  border-width: 4px;
+}
+
 .border-\[--darkBlue\] {
   border-color: var(--darkBlue);
+}
+
+.border-blue-500 {
+  --tw-border-opacity: 1;
+  border-color: rgb(59 130 246 / var(--tw-border-opacity));
 }
 
 .bg-\[--darkBlue\] {
@@ -1253,6 +1262,10 @@ video {
 }
 
 @media (min-width: 768px) {
+  .md\:-right-24 {
+    right: -6rem;
+  }
+
   .md\:mb-auto {
     margin-bottom: auto;
   }
